@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} posts {% endblock %}
+
+{% block body %}
+    <main>
+        <div class="d-flex flex-column h-100 p-3">
+            <div class="container">
+        {% if posts %}
+            <table class="table table-striped table-hover table-bordered">
+                <tr>
+                    <th>ID</th>
+                    <th>Tytuł</th>
+                    <th>Treść</th>
+                    <th>Autor</th>
+                    <th></th>
+                </tr>
+            {% for post in posts %}
+                <tr>
+                    <td>{{ post.id }}</td>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.body }}</td>
+                    <td>{{ post.author }}</td>
+                    <td><a href="lista/delete/{{post.id}}"><button class="btn btn-danger">usuń</button></a></td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <h1>no posts</h1>
+        {% endif %}
+        
+            </div>
+        </div>
+    </main>
+{% endblock %}
