@@ -1,7 +1,11 @@
 # zadanie_v2
 
+1. zadanie/public/index.php/register  <----
+2. można usuwać itd
+
 - pobieranie komendą listy z  https://jsonplaceholder.typicode.com/posts - symfony console app:fetch-data
 - API platform dostępne pod  ....zadanie/public/index.php/api
+- baza danych SQLite
 
-1. zadanie/public/index.php/register
-2. mozna usuwac z listy
+
+
